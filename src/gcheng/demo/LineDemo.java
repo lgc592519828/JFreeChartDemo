@@ -36,14 +36,14 @@ public class LineDemo {
 	}
 	/**
 	 * 生成图表
-	 * @param title				主标题
+	 * @param title			主标题
 	 * @param categoryAxisLabel	轴标题
 	 * @param valueAxisLabel	Y轴标题
-	 * @param dataset			图表需要的数据 	CategoryDataset接口
+	 * @param dataset		图表需要的数据 	CategoryDataset接口
 	 * @param orientation	 	图标的方法(水平或垂直)(PlotOrientation类中常量)
-	 * @param legend			是否显示图例
-	 * @param tooltips			是否显示工具提示
-	 * @param urls				是否产生RUL连接
+	 * @param legend		是否显示图例
+	 * @param tooltips		是否显示工具提示
+	 * @param urls			是否产生RUL连接
 	 * @return
 	 */
 	private static JFreeChart getJFreeChart(String title, String categoryAxisLabel, String valueAxisLabel, 
