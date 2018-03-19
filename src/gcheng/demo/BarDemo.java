@@ -1,6 +1,22 @@
+package cn.gcheng.demo;
 /**
  * 柱状图
  */
+
+import java.awt.Font;
+import org.jfree.chart.ChartFactory;
+import org.jfree.chart.ChartFrame;
+import org.jfree.chart.JFreeChart;
+import org.jfree.chart.axis.CategoryAxis3D;
+import org.jfree.chart.axis.NumberAxis3D;
+import org.jfree.chart.axis.NumberTickUnit;
+import org.jfree.chart.labels.StandardCategoryItemLabelGenerator;
+import org.jfree.chart.plot.CategoryPlot;
+import org.jfree.chart.plot.PlotOrientation;
+import org.jfree.chart.renderer.category.BarRenderer3D;
+import org.jfree.data.category.CategoryDataset;
+import org.jfree.data.category.DefaultCategoryDataset;
+
 public class BarDemo {
 	
 	public static void main(String[] args) {
@@ -8,7 +24,7 @@ public class BarDemo {
 		CategoryDataset dataset = getDataset();
 		//绘制图表
 		JFreeChart chart = getJFreeChart("客户分析统计报表(客户等级)", "客户等级", "数量", dataset, 
-				  PlotOrientation.VERTICAL, true, true, true);
+				  		 PlotOrientation.VERTICAL, true, true, true);
 		doEnCoding(chart);
 		
 		//ChartFrame 继承 java.swing包  ：图形化
@@ -19,21 +35,21 @@ public class BarDemo {
 	}
 	/**
 	 * 生成图表
-	 * @param title		主标题
-	 * @param categoryAxisLabel		轴标题
+	 * @param title			主标题
+	 * @param categoryAxisLabel	轴标题
 	 * @param valueAxisLabel	Y轴标题
-	 * @param dataset	图表需要的数据 	CategoryDataset接口
-	 * @param orientation	 图标的方法(水平或垂直)(PlotOrientation类中常量)
-	 * @param legend	是否显示图例
-	 * @param tooltips	是否显示工具提示
-	 * @param urls	是否产生RUL连接
+	 * @param dataset		图表需要的数据 	CategoryDataset接口
+	 * @param orientation	 	图标的方法(水平或垂直)(PlotOrientation类中常量)
+	 * @param legend		是否显示图例
+	 * @param tooltips		是否显示工具提示
+	 * @param urls			是否产生RUL连接
 	 * @return
 	 */
 	private static JFreeChart getJFreeChart(String title, String categoryAxisLabel, String valueAxisLabel, 
 						CategoryDataset dataset, PlotOrientation orientation, 
 						Boolean legend, Boolean tooltips, Boolean urls){
 		JFreeChart chart = ChartFactory.createBarChart3D(title, categoryAxisLabel, valueAxisLabel, 
-				dataset, orientation, legend, tooltips, urls);
+								 dataset, orientation, legend, tooltips, urls);
 		return chart;
 	}
 	
@@ -52,7 +68,7 @@ public class BarDemo {
 	}
 	
 	/**
-	 * 处理乱码问题 以及 工具类的使用
+	 * 处理字符集问题 以及 工具类的使用
 	 * @param chart 图标对象
 	 */
 	private static void doEnCoding(JFreeChart chart){
