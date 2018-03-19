@@ -36,9 +36,9 @@ public class LineDemo {
 	}
 	/**
 	 * 生成图表
-	 * @param title				      主标题
-	 * @param categoryAxisLabel X轴标题
-	 * @param valueAxisLabel	  Y轴标题
+	 * @param title				主标题
+	 * @param categoryAxisLabel	轴标题
+	 * @param valueAxisLabel	Y轴标题
 	 * @param dataset			图表需要的数据 	CategoryDataset接口
 	 * @param orientation	 	图标的方法(水平或垂直)(PlotOrientation类中常量)
 	 * @param legend			是否显示图例
@@ -47,12 +47,11 @@ public class LineDemo {
 	 * @return
 	 */
 	private static JFreeChart getJFreeChart(String title, String categoryAxisLabel, String valueAxisLabel, 
-						                              CategoryDataset dataset, PlotOrientation orientation, 
-						                              Boolean legend, Boolean tooltips, Boolean urls){
-                                          
-      JFreeChart chart = ChartFactory.createLineChart(title, categoryAxisLabel, valueAxisLabel, 
-			                                                dataset, orientation, legend, tooltips, urls);
-		  return chart;
+						CategoryDataset dataset, PlotOrientation orientation, 
+						Boolean legend, Boolean tooltips, Boolean urls){
+		JFreeChart chart = ChartFactory.createLineChart(title, categoryAxisLabel, valueAxisLabel, 
+								dataset, orientation, legend, tooltips, urls);
+		return chart;
 	}
 	
 	/**
@@ -70,7 +69,7 @@ public class LineDemo {
 	}
 	
 	/**
-	 * 处理乱码问题 以及 工具类的使用
+	 * 处理字符集问题 以及 工具类的使用
 	 * @param chart 图标对象
 	 */
 	private static void doEnCoding(JFreeChart chart){
