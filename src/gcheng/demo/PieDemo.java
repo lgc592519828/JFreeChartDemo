@@ -22,6 +22,8 @@ public class PieDemo {
 		PieDataset dataset = getDataset();
 		//绘制图表
 		JFreeChart chart = getJFreeChart("客户分析统计报表(客户等级)", dataset, true, true, true);
+		
+		//使用工具类,处理字符编码
 		doEnCoding(chart);
 		
 		//生成图片格式,前端调用
@@ -35,11 +37,11 @@ public class PieDemo {
 	 * @param dataset	图表需要的数据 	
 	 * @param legend	是否显示图例
 	 * @param tooltips	是否显示工具提示
-	 * @param urls	是否产生RUL连接
+	 * @param urls		是否产生RUL连接
 	 * @return
 	 */
 	private static JFreeChart getJFreeChart(String title, PieDataset dataset, 
-			                                    Boolean legend, Boolean tooltips, Boolean urls){
+			                        Boolean legend, Boolean tooltips, Boolean urls){
 		JFreeChart chart = ChartFactory.createPieChart3D(title, dataset, legend, tooltips, urls);
 		return chart;
 	}
