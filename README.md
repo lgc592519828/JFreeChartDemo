@@ -38,5 +38,10 @@
 ```
 ---
 **效果图**  
-1. 柱状图  
+![](https://github.com/lgc592519828/JFreeChartDemo/blob/master/src/gcheng/images/柱状图.png)  
+---
+![](https://github.com/lgc592519828/JFreeChartDemo/blob/master/src/gcheng/images/线状图.png)  
+---
+![](https://github.com/lgc592519828/JFreeChartDemo/blob/master/src/gcheng/images/饼图.png)  
+
 
