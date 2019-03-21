@@ -25,3 +25,18 @@
       * `PiePlot3D plot3d = (PiePlot3D) chart.getPlot();`  
       * //获取图表对象：  
       * `CategoryPlot plot = (CategoryPlot) chart.getPlot();`  
+
+
+---
+**MAVEN依赖**  
+```
+<dependency>
+   <groupId>jfree</groupId>  
+   <artifactId>jfreechart</artifactId>  
+   <version>1.0.13</version>  
+</dependency>
+```
+---
+**效果图**  
+1. 柱状图  
+
