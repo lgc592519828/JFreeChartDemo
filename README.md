@@ -30,7 +30,7 @@
 ---
 **MAVEN依赖**  
 ```
-<dependency>
+<dependency>  
    <groupId>jfree</groupId>  
    <artifactId>jfreechart</artifactId>  
    <version>1.0.13</version>  
